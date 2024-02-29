@@ -19,6 +19,7 @@ public class JdbcDataSource extends BasicDataSource {
         String enablePooling = (!StringUtils.isBlank(dbProperties.getDbEnablePooling())) ? dbProperties.getDbEnablePooling(): "false";
         String connectionURL = dbProperties.getSpringConnectionURL();
         
+/*
         Assert.isTrue(
             !defined(dbProperties.getDbHost()) && !defined(dbProperties.getDbUser()) && !defined(dbProperties.getDbPassword()) && !defined(dbProperties.getDbName()) && !defined(dbProperties.getConnectionURL()) && !defined(dbProperties.getDbDriverClassName()) && !defined(dbProperties.getDbUseSSL()),
             "\n----------------------------------------------------------------------------------------------------------------" +
@@ -28,11 +29,11 @@ public class JdbcDataSource extends BasicDataSource {
                 "-- for assistance on building a valid connection string.\n" +
                 "----------------------------------------------------------------------------------------------------------------\n"
         );
-        
         Assert.hasText(userName, errorMessage("username", "spring.datasource.username"));
         Assert.hasText(password, errorMessage("password", "spring.datasource.password"));
         Assert.hasText(mysqlDriverClassName, errorMessage("driver class name", "spring.datasource.driver-class-name"));
 
+ */       
         this.setUrl(connectionURL);
 
         //  Set up poolable data source
